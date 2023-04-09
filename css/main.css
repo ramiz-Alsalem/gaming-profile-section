@@ -1,0 +1,278 @@
+/* Start Variables */
+:root {
+    --main-color: #607d8b;
+    --secondary-color: #777;
+    --section-padding: 15px 50px;
+    --numbers-color1: #009688;
+    --span-color: #e91e63;
+}
+@media (max-width: 767px) {
+    :root {
+        --section-padding: 15px 10px;
+    }
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #eee;
+    font-family: "open sans";
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Meduim */ 
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */ 
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start Components */
+.title {
+    background-color: var(--main-color, #607d8b);
+    padding: 10px;
+    color: white;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+.line {
+    height: 1px;
+    width: calc(100% - 20px);
+    background-color: #d4d4d4b0;
+    margin: 10px auto;
+}
+.line:last-of-type {
+    margin-bottom: 20px;
+}
+/* End Components */
+/* Start Header */
+.header {
+    padding: var(--section-padding, 15px 50px)
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    position: relative;
+    width: 100%;
+    padding: 15px;
+}
+@media (max-width: 767px) {
+    .header .container {
+        flex-direction: column;
+    }
+}
+.header .container .left-side {
+    flex-basis: 15%;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.header .container .left-side img {
+    width: 150px;
+    border: solid 2px #ccc;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: auto 15px;
+}
+.header .container .left-side p:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+}
+.header .container .left-side .level {
+    padding: 10px 5px;
+    width: 90%;
+    background-color: #ccc;
+    margin: 10px auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .header .container .left-side .level {
+        width: 40%;
+    }
+}
+.header .container .left-side .level::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--numbers-color1);
+    height: 100%;
+    width: 75%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.header .container .left-side p:last-child {
+    font-size: 14px;
+    color: var(--secondary-color, #777);
+}
+@media (max-width: 767px) {
+    .header .container .left-side p:last-child {
+        margin-bottom: 15px;
+    }
+}
+.header .container .left-side p:last-child span {
+    color: var(--numbers-color1);
+    font-weight: bold;
+}
+.line-between {
+    flex-basis: 1px;
+    background-color: #ccc;
+}
+.header .container .content {
+    flex-basis: calc(100% - 20%);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.header .container .content p {
+    color: var(--secondary-color, #777);
+    line-height: 2;
+}
+.header .container .content p:last-child {
+    text-align: right;
+    margin-top: 50px;
+}
+@media (max-width: 767px) {
+    .header .container .content p:last-child {
+        margin-bottom: 15px;
+    }
+}
+/* End Header */
+/* Start Points Log */
+.points {
+    padding: var(--section-padding, 15px 50px);
+}
+.points .container {
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+}
+.points .container p {
+    color: var(--secondary-color, #777);
+    padding: 10px 0;
+    font-size: 17px;
+    line-height: 2;
+}
+.points .container p:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.points .container p span:first-of-type {
+    color: var(--numbers-color1, #009688);
+    font-weight: bold;
+}
+.points .container p span:last-of-type {
+    color: var(--span-color, #e91e63);
+    font-weight: bold;
+}
+/* End Points Log */
+/* Start Trophies */
+.trophies {
+    padding: var(--section-padding, 15px 50px);
+}
+.trophies .container {
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+}
+.trophies .container .imgs-container {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+.trophies .container .imgs-container img {
+    display: block;
+    width: 100px;
+}
+/* End Trophies */
+/* Start Lader News */
+.ladder {
+    padding: var(--section-padding, 15px 50px);
+}
+.ladder .container {
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+}
+.ladder .container p {
+    font-size: 20px;
+    color: var(--secondary-color)
+}
+@media (max-width: 767px) {
+    .ladder .container p {
+        font-size: 16px;
+    }
+}
+.ladder .container p span:first-child {
+    color: var(--span-color);
+    font-weight: bold;
+}
+.ladder .container p span:last-child {
+    color: #2196f3;
+    font-weight: bold;
+}
+/* End Lader News */
+/* Start powers */
+.powers {
+    padding: var(--section-padding, 15px 50px);
+}
+.powers .container {
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+}
+.powers .container div {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 20px;
+    color: var(--secondary-color);
+    border-bottom: 1px solid #eee;
+}
+.powers .container div:last-child {
+    border-bottom: none;
+}
+.powers .container div:nth-of-type(1) p:last-child,
+.powers .container div:nth-of-type(2) p:last-child,
+.powers .container div:nth-of-type(4) p:last-child,
+.powers .container div:nth-of-type(6) p:last-child{
+    color: green;
+    font-weight: bold;
+}
+.powers .container div:nth-of-type(3) p:last-child,
+.powers .container div:nth-of-type(5) p:last-child{
+    color: red;
+    font-weight: bold;
+}
+@media (max-width: 767px) {
+    .powers .container div p:first-child,
+    .powers .container div p:last-child {
+        font-size: 16px;
+    }
+}
+/* End Powers */
